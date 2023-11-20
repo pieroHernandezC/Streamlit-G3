@@ -20,7 +20,7 @@ def app():
 
     # df = datas.DataReader(user_input, "yahoo", start, end)
     df = yf.download(user_input, start, end)
-    df.index = df.index.strftime('%Y-%m-%d')
+    #df.index = df.index.strftime('%Y-%m-%d')
     df.reset_index(inplace=True)
 
     # Describiendo los datos
