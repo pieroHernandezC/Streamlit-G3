@@ -14,7 +14,7 @@ def app():
     user_input = st.text_input("Introducir cotización bursátil", "AVGO")
 
     df = yf.download(user_input, start, end)
-    df.index = df.index.strftime('%Y-%m-%d')
+    #df.index = df.index.strftime('%Y-%m-%d')
     df.reset_index(inplace=True)
 
     st.subheader("Datos del Diciembre - 2022")
